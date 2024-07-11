@@ -6,22 +6,44 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .quality{
+            background-color: red;
+            color : white;
+        }
+        .add-cart{
+            background-color: green;
+            color : white;
+        }
+        .add-two{
+            background-color: blue;
+            color : white;
+        }
+        .add-three{
+            background-color: yellow;
+            color : white;
+        }
+        .reset{
+            background-color: black;
+            color : white;
+        }
+        </style>
     </head>
     <body>
         <p>Cart quality :</p>
-        <button onclick="console.log(`cart quality :${cart}`);">Show quality</button>
+        <button onclick="console.log(`cart quality :${cart}`);" class="quality">Show quality</button>
         <button onclick="
         cart  = cart +1;
-        console.log(`cart quality :${cart}`)">Add to the cart.</button>
+        console.log(`cart quality :${cart}`)" class="add-cart">Add to the cart.</button>
         <button onclick="
         cart = cart+ 2;
-        console.log(`cart quality :${cart}`)">+2</button>
+        console.log(`cart quality :${cart}`)" class="add-two">+2</button>
         <button onclick="
         cart = cart + 3 ;
-        console.log(`cart quality :${cart}`)">+3</button>
+        console.log(`cart quality :${cart}`)" class="add-three">+3</button>
         <button onclick="
         cart = 0 ;
-        console.log(`cart quality :${cart}`)">Reset cart.</button>
+        console.log(`cart quality :${cart}`)" class="reset">Reset cart.</button>
 
         <script>
           let cart = 0;
