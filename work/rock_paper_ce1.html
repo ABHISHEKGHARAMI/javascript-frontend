@@ -11,8 +11,7 @@
     <body>
         <p>Rock paper Scissors game for the project.</p>
         <button onclick="
-         let result = pickPlayerMove('rock');
-         alert(`Computer picks ${re1} and you pick rock. and result is : ${re2}`);
+        pickPlayerMove('rock');
         ">Rock</button>
         <button onclick="
         let re2 ='';
@@ -64,7 +63,7 @@
             else if(computerMove === 'rock' && playerMove === 'paper' || computerMove ==='scissor' && playerMove ==='rock'){
                 result = 'You win';
             }
-            return result;
+            alert(`Computer picks : ${computerMove} and Player picks : ${playerMove} and result is : ${result}`)
          }
          
          function pickComputerMove(){
@@ -81,7 +80,7 @@
             }
             return result;
          }
-        
+        pickComputerMove();
 
        </script>
     </body>
