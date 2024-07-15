@@ -22,14 +22,16 @@
         <script>
          function pickPlayerMove(playerMove){
             let result = '';
-            const computerMove = pickComputerMove();
+            let computerMove = pickComputerMove();
             if(playerMove === computerMove){
               result = 'tie';
             }
-            else if(computerMove ==='paper' && playerMove==='rock' || computerMove === 'rock' && playerMove === 'scissor' ){
+            else if(computerMove === 'rock' && playerMove === 'scissor') || 
+                (computerMove === 'paper' && playerMove === 'rock') || 
+                (computerMove === 'scissor' && playerMove === 'paper'){
                 result = 'Computer win';
             }
-            else if(computerMove === 'rock' && playerMove === 'paper' || computerMove ==='scissor' && playerMove ==='rock'){
+            else{
                 result = 'You win';
             }
             alert(`Computer picks : ${computerMove} and Player picks : ${playerMove} and result is : ${result}`)
