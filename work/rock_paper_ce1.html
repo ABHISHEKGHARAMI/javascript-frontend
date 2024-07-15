@@ -96,6 +96,14 @@
             }
             return result;
          }
+         function updateScores() {
+            document.getElementById('cwin').textContent = cwin;
+            document.getElementById('closs').textContent = closs;
+            document.getElementById('ctie').textContent = ctie;
+            document.getElementById('uwin').textContent = uwin;
+            document.getElementById('uloss').textContent = uloss;
+            document.getElementById('utie').textContent = utie;
+         }
         pickComputerMove();
 
        </script>
