@@ -38,9 +38,24 @@
           re2 = 'Computer win.'
         }
 
-        alert(`Computer picks ${re1} and you pick scissor. and result is : ${re2}`);
+        alert(`Computer picks ${re1} and you pick Paper. and result is : ${re2}`);
         ">Paper</button>
-        <button>Scissor</button>
+        <button onclick="
+         let re2 ='';
+         let re1 = pickComputerMove();
+         if(re1==='rock'){
+           re2 = 'Computer win';
+         }
+         else if(re1==='paper'){
+          re2 = 'You win.'
+        }
+        else if(re1=='scissor'){
+          re2 = 'Tie.'
+        }
+
+        alert(`Computer picks ${re1} and you pick scissor. and result is : ${re2}`);
+
+        ">Scissor</button>
         <script>
          let computerMove = '';
          let result = '';
