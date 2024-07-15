@@ -17,23 +17,7 @@
         pickPlayerMove('paper');
         ">Paper</button>
         <button onclick="
-         let re2 ='';
-         let re1 = pickComputerMove();
-         if(re1==='rock'){
-           re2 = 'Computer win';
-           
-         }
-         else if(re1==='paper'){
-          re2 = 'You win.'
-         
-        }
-        else if(re1=='scissor'){
-          re2 = 'Tie.'
-          
-        }
-
-        alert(`Computer picks ${re1} and you pick scissor. and result is : ${re2}`);
-
+        pickPlayerMove('scissor');
         ">Scissor</button>
         <script>
          function pickPlayerMove(playerMove){
@@ -65,8 +49,6 @@
             }
             return result;
          }
-        pickComputerMove();
-
        </script>
     </body>
 </html>
