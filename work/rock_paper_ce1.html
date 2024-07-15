@@ -26,9 +26,9 @@
             if(playerMove === computerMove){
               result = 'tie';
             }
-            else if(computerMove === 'rock' && playerMove === 'scissor') || 
+            else if((computerMove === 'rock' && playerMove === 'scissor') || 
                 (computerMove === 'paper' && playerMove === 'rock') || 
-                (computerMove === 'scissor' && playerMove === 'paper'){
+                (computerMove === 'scissor' && playerMove === 'paper')){
                 result = 'Computer win';
             }
             else{
