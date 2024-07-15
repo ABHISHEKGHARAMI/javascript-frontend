@@ -7,18 +7,32 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <style>
+        .rock-button{
+            background-color: red;
+            color : white;
+        }
+        .paper-button{
+            background-color : yellow;
+            color : white;
+        }
+        .scissor-button{
+            background-color : green;
+            color: white;
+        }
+        </style>
     </head>
     <body>
         <p>Rock paper Scissors game for the project.</p>
         <button onclick="
         pickPlayerMove('rock');
-        ">Rock</button>
+        " class="rock-button">Rock</button>
         <button onclick="
         pickPlayerMove('paper');
-        ">Paper</button>
+        " class="paper-button">Paper</button>
         <button onclick="
         pickPlayerMove('scissor');
-        ">Scissor</button>
+        " class="scissor-button">Scissor</button>
         <script>
          function pickPlayerMove(playerMove){
             let result = '';
