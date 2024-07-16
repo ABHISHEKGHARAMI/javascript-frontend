@@ -34,13 +34,13 @@
         pickPlayerMove('scissor');
         " class="scissor-button">Scissor</button>
         <script>
-         function pickPlayerMove(playerMove){
-            let result = '';
-            const score = {
+         const score = {
                 win : 0,
                 loss : 0,
                 tie : 0
             };
+         function pickPlayerMove(playerMove){
+            let result = '';
             let computerMove = pickComputerMove();
             if(playerMove === computerMove){
               result = 'tie';
