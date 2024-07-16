@@ -37,14 +37,10 @@
         <button onclick="
         pickPlayerMove('scissor');
         " class="scissor-button">Scissor</button>
-        <button onclick="
-         score.win = 0;
-         score.loss = 0;
-         score.tie = 0;
-        " class="reset-button">Reset score
+        <button onclick="resetScore()" class="reset-button">Reset score
         </button>
         <script>
-         const score = JSON.parse(localStorage.getItem('score'));
+         let score = JSON.parse(localStorage.getItem('score')) || {win: 0, loss: 0, tie: 0};
          function pickPlayerMove(playerMove){
             let result = '';
             let computerMove = pickComputerMove();
@@ -88,6 +84,10 @@
             }
             return result;
          }
+         function resetScore() {
+            score = {win: 0, loss: 0, tie: 0};
+            localStorage.setItem('score', JSON.stringify(score));
+        }
        </script>
     </body>
 </html>
