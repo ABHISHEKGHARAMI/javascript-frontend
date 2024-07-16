@@ -33,6 +33,12 @@
         <button onclick="
         pickPlayerMove('scissor');
         " class="scissor-button">Scissor</button>
+        <button onclick="
+         score.win = 0;
+         score.loss = 0;
+         score.tie = 0;
+        ">Reset score
+        </button>
         <script>
          const score = {
                 win : 0,
