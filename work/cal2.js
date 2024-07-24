@@ -1,5 +1,5 @@
 function calFunc(){
     let charge = document.getElementById('charge').value;
-    charge = parseInt(charge);
-    console.log(typeof charge);
+    let chargeInt = parseInt(charge);
+    console.log(typeof chargeInt);
 }
