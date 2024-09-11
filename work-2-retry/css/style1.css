@@ -1,0 +1,34 @@
+.rock-class{
+    width: 150px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 20px;
+}
+
+.paper-class{
+        width: 150px;
+        height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: green;
+        font-size: 20px;
+}
+.scissor-class{
+        width: 150px;
+        height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: white;
+        font-size: 20px;
+}
+
+.reset-class{
+    width: 150px;
+        height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: grey;
+        font-size: 20px;
+}
