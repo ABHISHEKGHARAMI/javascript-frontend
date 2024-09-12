@@ -1,25 +1,18 @@
 body{
     text-align: center;
     font-size: medium;
-    background-color: grey;
-}
-.form-class{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 100;
-    font-style: normal;
-    
+    background-color: green;
 }
 
-.input-class{
+#username{
     width: 200px;
-        /* Set desired width */
-        height: 30px;
-        /* Set height */
-        padding: 10px;
-        border: 1px solid #ccc;
-        /* Optional: for border color */
-        border-radius: 20px;
-        /* Half of the height for smooth oval */
-        font-size: 16px;
-        outline: none;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.button-class{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    
 }
