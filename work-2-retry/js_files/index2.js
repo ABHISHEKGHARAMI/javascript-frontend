@@ -36,8 +36,7 @@ function pickPlayerMove(playerMove){
         result = 'User win.';
         score.win += 1;
     }
-    alert(`Computer pick :${computerMove},Player picks :${playerMove},result is : ${result}
-        User win : ${score.win},loss :${score.loss},tie : ${score.tie}`)
+    alert(`Computer pick :${computerMove},Player picks :${playerMove},result is : ${result} User win : ${score.win},loss :${score.loss},tie : ${score.tie}`)
     return result;
 }
 
