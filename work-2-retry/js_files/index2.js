@@ -62,3 +62,14 @@ function Scalc(){
     
     
 }
+
+
+document.getElementById('subs').addEventListener('click',function(){
+    var button = document.getElementById('subs');
+    if (button.textContent === 'Subscribe'){
+        button.textContent = 'Unsubscribe';
+    }else{
+        button.textContent = 'Subscribe' ;
+    }
+
+})
