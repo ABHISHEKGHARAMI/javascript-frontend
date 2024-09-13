@@ -45,3 +45,20 @@ function resetScore(){
     score = {'win' : 0,'loss' : 0,'tie': 0};
     localStorage.setItem(JSON.stringify(score));
 }
+
+
+//  gst calculater
+function Scalc(){
+    let value = document.getElementById('total').value;
+    let result = '';
+    value = parseFloat(value);
+    if (value < 40 && value > 0){
+        value += 10 ;
+        result = `Your total cost is : ${value}`;
+    }else{
+        result = `Your total cost is : ${value}`
+    }
+    document.getElementById('calc').innerHTML = result;    
+    
+    
+}
