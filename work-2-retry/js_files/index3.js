@@ -1,45 +1,88 @@
+ function saveToLocalStorage(todoList) {
+            localStorage.setItem('todos', JSON.stringify(todoList));
+        }
+
+        // Function to get to-do list from localStorage
+function getFromLocalStorage() {
+            const todos = localStorage.getItem('todos');
+            return todos ? JSON.parse(todos) : [];
+        }
 function createFunction(){
     const  title = document.getElementById('titleInput').value;
     const time = document.getElementById('timeInput').value;
 
     // check for the condition for the input
     if(title && time){
-       // get the table body to create the table
-       const tableBody = document.querySelector('#todoTable tbody');
+       const todoList = getFromLocalStorage();
+       const newTodo = { title, time };
 
-       // create a new row
-       const newRow = document.createElement('tr');
+        // Add the new to-do to the array
+       todoList.push(newTodo);
 
-       // create the td for the title, time and delete button.
-       const titleCell = document.createElement('td');
-       titleCell.textContent = title;
+                // Save the updated list to localStorage
+                saveToLocalStorage(todoList);
 
-       const timeCell = document.createElement('td');
-       timeCell.textContent = time;
+                // Display the updated list in the table
+                displayToDos();
 
-       const ActionCell = document.createElement('td');
-       const deleteButton = document.createElement('button');
-       deleteButton.textContent = 'Delete'
-       deleteButton.onclick = function (){
-        tableBody.removeChild(newRow);
-       };
-       // append the delete button for the action cell
-       ActionCell.appendChild(deleteButton);
-
-       // append the new cell for the new row
-       newRow.appendChild(titleCell);
-       newRow.appendChild(timeCell);
-       newRow.appendChild(ActionCell);
-
-       // add the new row for the tableBody
-       tableBody.appendChild(newRow);
-
-       // clear the input for the next time
-       document.getElementById('titleInput').value = '';
-       document.getElementById('timeInput').value = '';
+                // Clear input fields
+                document.getElementById('titleInput').value = '';
+                document.getElementById('timeInput').value = '';
 
 
     }else{
         alert(`Title and Time input are not given.`)
     }
 }
+// Function to display the to-do items in the table
+        function displayToDos() {
+            const todoList = getFromLocalStorage();
+            const tableBody = document.querySelector('#todoTable tbody');
+            tableBody.innerHTML = '';  // Clear the table body
+
+            // Loop through the to-do list and create table rows
+            todoList.forEach((todo, index) => {
+                const newRow = document.createElement('tr');
+
+                const titleCell = document.createElement('td');
+                titleCell.textContent = todo.title;
+
+                const timeCell = document.createElement('td');
+                timeCell.textContent = todo.time;
+
+                const actionCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = function () {
+                    deleteToDo(index);
+                };
+
+                actionCell.appendChild(deleteButton);
+
+                newRow.appendChild(titleCell);
+                newRow.appendChild(timeCell);
+                newRow.appendChild(actionCell);
+
+                tableBody.appendChild(newRow);
+            });
+        }
+
+
+        // Function to delete a to-do item and update localStorage
+        function deleteToDo(index) {
+            const todoList = getFromLocalStorage();
+
+            // Remove the item at the specified index
+            todoList.splice(index, 1);
+
+            // Save the updated list to localStorage
+            saveToLocalStorage(todoList);
+
+            // Refresh the display
+            displayToDos();
+        }
+
+        // Load and display the to-do list when the page is loaded
+        window.onload = function () {
+            displayToDos();
+        };
