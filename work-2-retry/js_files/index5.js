@@ -9,7 +9,7 @@ function todoFunction(){
     // logging the list
     let innerHTML = '';
     for(let i =0 ;i < todo_list.length;i++){
-        let text = `<p>${todo_list[i]}</p>`
+        let text = `<p>${todo_list[i][0]}</p>`
         innerHTML += text;
     }
     document.querySelector('.js-inner').innerHTML = innerHTML;
