@@ -1,16 +1,23 @@
 let todo_list = [];
 
-function todoFunction(){
+function addtofunction(){
     let todo_name = document.querySelector('.js-input').value;
-    let todo_date = document.querySelector('.js-time').value;
-    // appending the value as a object
-    todo_list.push({todo_name,todo_date});
+    let todo_date = document.querySelector('.js-date').value;
 
-    // logging the list
-    let innerHTML = '';
-    for(let i =0 ;i < todo_list.length;i++){
-        let text = `<p>${todo_list[i][0]}</p>`
-        innerHTML += text;
+    // add to the list
+    todo_list.push({todo_name,todo_date});
+    render();
+}
+
+function render(){
+    let innerHtml = '';
+    for(let i = 0; i < todo_list.length;i++){
+      let text = `<p>Task name : ${todo_list[i]['todo_name']} time : ${todo_list[i]['todo_date']}
+      <button onclick="
+      todo_list.splice(${i},1);
+      ">Delete</button>
+      </p>`;
+      innerHtml += text;
     }
-    document.querySelector('.js-inner').innerHTML = innerHTML;
+    document.querySelector('.js-inner').innerHTML = innerHtml;
 }
