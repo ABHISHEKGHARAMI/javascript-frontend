@@ -5,6 +5,7 @@
 .todo_name{
     display: inline-block;
     width: 200px;
+    font:100;
 
 }
 .todo_date{
@@ -18,4 +19,15 @@
 
 .add-button{
     background-color: green;
+}
+
+.js-input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5%;
+}
+.js-time{
+    height: 30px;
+    width: 200px;
+    border-radius: 5%;
 }
