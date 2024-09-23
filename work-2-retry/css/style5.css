@@ -1,0 +1,21 @@
+.todo_item{
+    margin-bottom: 10px;
+}
+
+.todo_name{
+    display: inline-block;
+    width: 200px;
+
+}
+.todo_date{
+    display: inline-block;
+    width: 150px;
+}
+.delete-button{
+    margin-left: 10px;
+    background-color: red;
+}
+
+.add-button{
+    background-color: green;
+}
