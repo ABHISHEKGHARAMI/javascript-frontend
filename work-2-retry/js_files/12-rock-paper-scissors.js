@@ -54,8 +54,11 @@ function playGame(playerMove){
     else if(result == 'tie'){
         score.ties += 1
     }
-    return result;
+
+    localStorage.setItem('score',JSON.stringify(score));
+    
 }
+
 
 function pickComputerMove(){
     const randomNumber = Math.random();
