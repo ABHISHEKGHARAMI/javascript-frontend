@@ -38,6 +38,11 @@ document.querySelector('.js-paper-button').
 addEventListener('click',()=>{
     playGame('paper');
 })
+
+document.querySelector('.js-scissor-button').
+addEventListener('click',()=>{
+    playGame('scissor');
+})
 // function for play the game for the player Move
 function playGame(playerMove){
     const computerMove = pickComputerMove();
