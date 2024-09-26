@@ -33,6 +33,11 @@ document.querySelector('.js-rock-button').
 addEventListener('click',()=>{
   playGame('rock');
 })
+
+document.querySelector('.js-paper-button').
+addEventListener('click',()=>{
+    playGame('paper');
+})
 // function for play the game for the player Move
 function playGame(playerMove){
     const computerMove = pickComputerMove();
