@@ -5,6 +5,8 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties : 0
 };
 
+
+
 // going for the autoplay
 let autoPlaying  = false;
 let intervalId;
@@ -25,6 +27,12 @@ function autoPlay(){
     }
     
 }
+
+// time for the button for the user
+document.querySelector('.js-rock-button').
+addEventListener('click',()=>{
+  playGame('rock');
+})
 // function for play the game for the player Move
 function playGame(playerMove){
     const computerMove = pickComputerMove();
