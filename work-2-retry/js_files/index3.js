@@ -53,6 +53,7 @@ function createFunction(){
                 const actionCell = document.createElement('td');
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = 'Delete';
+                deleteButton.style.backgroundColor='red';
                 deleteButton.onclick = function () {
                     deleteToDo(index);
                 };
